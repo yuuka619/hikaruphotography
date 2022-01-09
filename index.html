@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/lightbox.min.css">
   <title>Ota Hikaru-Gallery-</title>
 </head>
 <body>
@@ -35,28 +36,50 @@
     </div><!--headerPC-->
   </header>
   <main>
-    <div class="hero">
-      <ul>
-        <li><img src="" alt=""></a></li>
-        <li><img src="" alt=""></a></li>
-        <li><img src="" alt=""></a></li>
-      </ul>
-    </div>
+    <section class="topPage">
+      <h1><span>photographer</span><br>Hikaru Ota</h1>
+      <div class="hero">
+        <ul>
+          <li><img src="assets/gallery_images/IMG_01min.JPG" alt=""></a></li>
+          <li><img src="" alt=""></a></li>
+          <li><img src="" alt=""></a></li>
+        </ul>
+      </div>
+    </section><!--topPage-->
+
     <section class="content">
       <h2>gallery</h2>
       <span>scroll</span>
+      <div class="lightbox-container">
+        <ul>
+            <li><a href="./images/img_01.jpg" data-lightbox="simple-group" data-alt="町の画像"><img src="./images/img_01.jpg" alt="町の画像"></a></li>
+            <li><a href="./images/img_02.jpg" data-lightbox="simple-group" data-alt="ビーチの画像"><img src="./images/img_02.jpg" alt="ビーチの画像"></a></li>
+            <li><a href="./images/img_03.jpg" data-lightbox="simple-group" data-alt="岩の画像"><img src="./images/img_03.jpg" alt="岩の画像"></a></li>
+            <li><a href="./images/img_04.jpg" data-lightbox="simple-group" data-alt="鳥居の画像"><img src="./images/img_04.jpg" alt="鳥居の画像"></a></li>
+            <li><a href="./images/img_05.jpg" data-lightbox="simple-group" data-alt="ぶどうの画像"><img src="./images/img_05.jpg" alt="ぶどうの画像"></a></li>
+            <li><a href="./images/img_06.jpg" data-lightbox="simple-group" data-alt="ケーキの画像"><img src="./images/img_06.jpg" alt="ケーキの画像"></a></li>
+        </ul>
+    </div>
+    </body>
     </section>
   </main>
   <fotter>
     <div class="copy">Hikaru Ota since2021</div>
   </fotter>
+  <script src="assets/js/lightbox-plus-jquery.min.js"></script>
+  <!--jQueryが含まれている-->
+  <script>
+    $(function(){
+      $('h1').css('color','#de7a22');
+    });
+  </script>
 </body>
 </html>
 
 
 
 
-<dl class="contact7">
+<dl class="contact">
   <dt><label for="name"> お名前 </label></dt>
   <dd>[text* your-name]</dd> 
 
