@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+/*----------------------
+        メディアクエリ
+  ---------------------*/
+$pc: 980px; // PC
+$tab: 680px; // タブレット
+$sp: 375px;  // スマホ
+
+@mixin pc {
+  @media (min-width: ($pc)) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media (min-width: ($tab)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (min-width: ($sp)) {
+    @content;
+  }
+}
+/*---------------------------
+  テキストカラー
+----------------------------*/
+$text : #262222;
+
+/*---------------------------
+  共通
+----------------------------*/
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 62.5%;
+}
+body{
+  color: $text;
+  display: flex;
+  font-size: 1.6rem;
+  flex-direction: column;
+  height: 100wh;
+}
+main{
+  flex: 1;
+}
+
+
+ul{
+  padding-left: 0;
+  li{
+    list-style: none;
+  }
+}
+a{
+  text-decoration: none;
+  color: $text;
+}
+
+section{
+  text-align: center;
+}
+
+/*---------------------------
+  header
+----------------------------*/
+
+/*スマホ*/
+.sns-sp{
+  ul{
+    display: inline-flex;
+  }
+}
+.fa-brands{
+  color: #1A1818;
+  padding: 14px;
+}
+
+.header_inner_SP{
+  display: none; /**一時的に非表示*/
+  text-align: center;
+ .menu{
+  margin-top: 85px;
+  padding: 0;
+  li{
+    padding: 0 0 36px 0;
+  }
+ } 
+
+}
+
+/*PC*/
+.header_inner_PC{
+  background-color: red;
+  max-width: 1000px;
+  padding: 22px 20px;
+  .nav_menu_PC{
+    .menu{
+      display: flex;
+      justify-content: flex-end;
+      li{
+        margin-left: 40px;
+      }
+    }
+  }
+}
+
+
+h1{
+  background-color: gray;
+  color: #fff;
+  display: inline-block;
+}
