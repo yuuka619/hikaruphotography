@@ -29,13 +29,13 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100wh;
 }
 
 main {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  overflow-x: hidden;
 }
 
 ul {
@@ -53,14 +53,45 @@ a {
 
 section {
   text-align: center;
+  scroll-snap-align: start;
 }
 
 h2 {
+  position: relative;
+  display: inline-block;
   margin-top: 100px;
+  font-weight: 400;
+  margin-bottom: 36px;
+  padding-bottom: 10px;
+}
+
+h2::after {
+  position: absolute;
+  content: "";
+  width: 70%;
+  height: 1px;
+  bottom: 0px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translate(-50%);
+  /*位置調整*/
+  background-color: #666666;
+  /*下線の色*/
 }
 
 img {
   max-width: 100%;
+}
+
+.siteWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
 }
 
 /*---------------------------
@@ -72,6 +103,7 @@ header {
 
 header a {
   color: #fff;
+  letter-spacing: 0.3rem;
 }
 
 /*スマホ*/
@@ -124,18 +156,18 @@ header a {
 /*---------------------------
   hero
 ----------------------------*/
-h1 {
-  color: #fff;
-  display: inline-block;
-  font-size: 2.6rem;
-}
-
-h1 span {
-  font-size: 1.2rem;
-}
-
 .topPage {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.topPage .hero {
+  position: fixed;
+  z-index: -1;
   margin-top: -68px;
+  width: 100%;
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
@@ -145,17 +177,40 @@ h1 span {
 
 .title_wrapper {
   position: absolute;
-  height: 50px;
-  width: 200px;
-  top: 50%;
+  top: 42%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  z-index: 5;
 }
 
+.title_wrapper h1 {
+  color: #fff;
+  display: inline-block;
+  font-size: 2.2rem;
+  font-weight: 400;
+  letter-spacing: 0.7rem;
+  text-align: left;
+}
+
+.title_wrapper h1 span {
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+  padding-bottom: 4px;
+  display: inline-block;
+}
+
+/*ピタッと止める*/
 /*---------------------------
   grid
 ----------------------------*/
+.content {
+  position: relative;
+  z-index: 10;
+  background-color: #fff;
+  padding: 2px;
+}
+
 .grid {
   display: -ms-grid;
   display: grid;
@@ -183,5 +238,34 @@ fotter {
   text-align: center;
   color: #fff;
   padding: 20px 0;
+}
+
+/*---------------------------
+仮想ページ
+----------------------------*/
+/*メニュー*/
+.subpage_header a {
+  color: #262222;
+}
+
+/*about*/
+.profile-are {
+  position: relative;
+}
+
+.profile_img {
+  display: inline-block;
+  max-width: 568px;
+}
+
+.profile {
+  position: absolute;
+  bottom: -70px;
+  left: 0;
+  display: inline-block;
+  padding: 58px 62px;
+  text-align: left;
+  max-width: 475px;
+  background-color: red;
 }
 /*# sourceMappingURL=style.css.map */

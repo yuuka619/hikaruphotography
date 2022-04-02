@@ -1,2 +1,4 @@
 ren *.JPG *.jpg
-ren *.JPEG *.jpeg
+ren *.JPEG *.jpg
+ren *.jpeg *.jpg
+
