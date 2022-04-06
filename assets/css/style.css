@@ -69,13 +69,13 @@ h2::after {
   position: absolute;
   content: "";
   width: 70%;
-  height: 1px;
+  height: 2px;
   bottom: 0px;
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translate(-50%);
   /*位置調整*/
-  background-color: #666666;
+  background-color: #E2E2E2;
   /*下線の色*/
 }
 
@@ -250,22 +250,44 @@ fotter {
 
 /*about*/
 .profile-are {
+  max-width: 1300px;
+  height: 500px;
+  margin: 0 auto;
   position: relative;
 }
 
-.profile_img {
+.profile-are .profile_img {
+  position: absolute;
+  top: 0;
+  right: 140px;
   display: inline-block;
   max-width: 568px;
+  -webkit-box-shadow: -5px 5px #D2CACA;
+          box-shadow: -5px 5px #D2CACA;
 }
 
-.profile {
+.profile-are .profile {
   position: absolute;
-  bottom: -70px;
-  left: 0;
+  top: 110px;
+  left: 234px;
   display: inline-block;
   padding: 58px 62px;
   text-align: left;
   max-width: 475px;
-  background-color: red;
+  background-color: #fff;
+  -webkit-box-shadow: -5px 5px #D2CACA;
+          box-shadow: -5px 5px #D2CACA;
+}
+
+.profile-are .profile::after {
+  content: url(/assets/images/about_logo.svg);
+  position: absolute;
+  left: 0%;
+  top: -50px;
+  width: 223px;
+}
+
+.profile-are .profile P {
+  width: 352px;
 }
 /*# sourceMappingURL=style.css.map */
