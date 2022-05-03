@@ -4,68 +4,83 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/d3js/5.15.1/d3.min.js"></script>-->
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel ="stylesheet" href="../assets/css/style.css">
+  <link rel ="stylesheet" href="../assets/css/move-style.css">
+  <link rel="stylesheet" href="../assets/css/lightbox.min.css">
+  <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
   <title>Ota Hikaru-Gallery-</title>
 </head>
 <body>
-  <header>
-    <div class="header_inner header_inner_SP">
-      <button class="humberger">
-        <span class="humberger-line"></span>
-        <span class="humberger-line"></span> 
-        <span class="humberger-line"></span>
-      </button>
-      <nav class="nav_menu_SP">
-        <ul class="menu">
-          <li class="sp-menu_item item01" ><a href="#main">top</a></li>
-          <li class="sp-menu_item item02"><a href="/about/about.html">about</a></li>
-          <li class="sp-menu_item"><a href="#midokoro">gallery</a></li>
-          <li class="sp-menu_item"><a href="#gaiyou">contact</a></li>
-        </ul>
-      </nav>
-    </div><!--headerSP-->
-    <div class="header_inner header_inner_PC">
-      <nav class="nav_menu_PC">
-        <ul class="menu">
-          <li><a href="#main">top</a></li>
-          <li><a href="#news">about</a></li>
-          <li><a href="#midokoro">gallery</a></li>
-          <li><a href="#gaiyou">contact</a></li>
-        </ul>
-      </nav>
-    </div><!--headerPC-->
-  </header>
-  <main>
-    <dl class="contact">
-      <dt><label for="name"> お名前 </label></dt>
-      <dd>[text* your-name]</dd> 
-
-      <label> フリガナ
-          [text your-furigana] </label>
-
-      <label> メールアドレス
-          [email* your-email] </label>
-
-      <label> メールアドレス確認
-          [email* your-email_confirm] </label>
-
-      <label> 電話番号
-        [tel* tel-736] </label>
-
-      <label> お問い合わせ内容
-          [textarea your-message] </label>
-
-    </dl>
-
-
-<dl>
-  <dl class="contact7">
-  <dt><label for="name"> お名前 </label></dt>
-  <dd>[text* your-name]</dd> 
-
-</dl>
-  </main>
-  <fotter>
-    <div class="copy">Hikaru Ota since2021</div>
-  </fotter>
+  <div class="siteWrapper">
+    <header class="subpage_header">
+      <div class="header_inner header_inner_SP">
+        <button class="humberger">
+          <span class="humberger-line"></span>
+          <span class="humberger-line"></span> 
+          <span class="humberger-line"></span>
+        </button>
+        <nav class="nav_menu_SP">
+          <ul class="menu">
+            <li class="sp-menu_item item01" ><a href="#main">top</a></li>
+            <li class="sp-menu_item item02"><a href="/about/about.html">about</a></li>
+            <li class="sp-menu_item"><a href="#midokoro">gallery</a></li>
+            <li class="sp-menu_item"><a href="#gaiyou">contact</a></li>
+          </ul>
+        </nav>
+      </div><!--headerSP-->
+      <div class="header_inner header_inner_PC">
+        <div class="sub-title_wrapper">
+          <h3><span>photographer</span><br>Hikaru Ota</h3>
+        </div>      
+        <nav class="nav_menu_PC">
+          <ul class="menu">
+            <li><a href="../index.html">top</a></li>
+            <li><a href="../index.html#gallery">gallery</a></li>
+            <li><a href="/about/about.html">about</a></li>
+            <li><a href="../contact/contact.html">contact</a></li>
+          </ul>
+        </nav>
+      </div><!--headerPC-->
+    </header>
+    <main>
+      <section>
+        <div class="page-title">
+          <h2>contact</h2>
+        </div>
+        <div class="contact__inner">
+            <div class="discription">
+                お仕事についてのお問い合わせは、下記のフォームよりお問い合わせください。<br>
+                後ほど、ご連絡させていただきます。
+            </div>
+        <div class="contactForm"><!--お問い合わせフォーム-->
+          <form id="my-form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeIRPlKD7q9JGlghME4_mo05w3sJM0ixFXHK3Jq2M4ztsQiKg/formResponse" class="form" target="_self" method="POST">
+              <p class="input-field">
+                  <label for="your-name">氏名<span>※</span></label><br>
+                  <input id="your-name" type="text" name="entry.1577391145" placeholder="例）◯◯　◯◯ " required>
+              </p>
+              <p class="input-field">
+                  <label for="your-email">メールアドレス<span>※</span></label><br>
+                  <input id="your-email" type="email" name="entry.807739577" placeholder="例）○○○○@○○○.com" required>
+              </p>
+              <p class="input-field">
+                  <label for="number">電話番号</label><br>
+                  <input type="tel" id="number" name="entry.1692085572" inputmode=”tel” placeholder="例）00000000000">
+              </p>
+              <p class="input-field">
+                  <label for="your-message">お問い合わせ内容<span>※</span></label><br>
+                  <textarea id="your-message" class="materialize-textarea" name="entry.301439141" cols="70" rows="13" placeholder="お問い合わせ内容をご記入ください"></textarea>
+              </p>
+              <button type="submit" class="btn_submit">送信</button>
+            </form><!-- /my-form -->
+          </div> <!--//お問い合わせフォーム--> 
+        </div><!--inner--> 
+      </section>
+    </main>
+    <fotter>
+      <p class="copy"><small>&copy;since2022</small></p>
+    </fotter> 
+  </div><!---->
 </body>
 </html>

@@ -5,6 +5,7 @@
 /*---------------------------
   テキストカラー
 ----------------------------*/
+/*コンタクトフォーム*/
 /*---------------------------
   共通
 ----------------------------*/
@@ -24,7 +25,9 @@ body {
   display: -ms-flexbox;
   display: flex;
   font-size: 1.6rem;
-  font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
+  font-family: noto-sans-cjk-jp,sans-serif;
+  font-weight: 300;
+  font-style: normal;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -56,6 +59,12 @@ section {
   scroll-snap-align: start;
 }
 
+h1, h2, h3 {
+  font-family: museo-slab, serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
 h2 {
   position: relative;
   display: inline-block;
@@ -78,6 +87,10 @@ h2::after {
   /*位置調整*/
   background-color: #E2E2E2;
   /*下線の色*/
+}
+
+h3 {
+  display: inline-block;
 }
 
 img {
@@ -136,9 +149,27 @@ header a {
 
 /*PC*/
 .header_inner_PC {
+  font-family: museo-slab, serif;
+  font-weight: 500;
+  font-style: normal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   margin: 0 auto;
   padding: 22px 100px;
+}
+
+.header_inner_PC.top {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .header_inner_PC .nav_menu_PC .menu {
@@ -181,6 +212,10 @@ header a {
           transform-origin: left top;
 }
 
+.logo_sub {
+  font-size: 1.2rem;
+}
+
 /*---------------------------
   hero
 ----------------------------*/
@@ -216,7 +251,9 @@ header a {
   color: #fff;
   display: inline-block;
   font-size: 2.2rem;
-  font-weight: 400;
+  font-family: museo-slab, serif;
+  font-weight: 500;
+  font-style: normal;
   letter-spacing: 0.7rem;
   text-align: left;
 }
@@ -228,6 +265,20 @@ header a {
   display: inline-block;
 }
 
+/*中段メニュー*/
+.sub-title_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sub-title_wrapper .middle {
+  background-color: darkcyan;
+}
+
 /*ピタッと止める*/
 /*---------------------------
   grid
@@ -236,7 +287,7 @@ header a {
   position: relative;
   z-index: 10;
   background-color: #fff;
-  padding: 2px;
+  padding-bottom: 1px;
 }
 
 .grid {
@@ -247,6 +298,15 @@ header a {
   gap: 2vw;
   -ms-grid-columns: (minmax(240px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.grid img {
+  width: 100%;
+  height: 240px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
 
 .grid-item {
@@ -266,11 +326,10 @@ fotter {
   text-align: center;
   color: #fff;
   padding: 20px 0;
-  margin-top: 46px;
 }
 
 /*---------------------------
-仮想ページ
+下層ページ
 ----------------------------*/
 /*メニュー*/
 .subpage_header a {
@@ -285,7 +344,7 @@ fotter {
 }
 
 .profile-are {
-  min-height: 420px;
+  min-height: 500px;
   position: relative;
 }
 
@@ -310,6 +369,7 @@ fotter {
   background-color: #fff;
   -webkit-box-shadow: -5px 5px #D2CACA;
           box-shadow: -5px 5px #D2CACA;
+  line-height: 1.6;
 }
 
 .profile-are .profile::after {
@@ -322,6 +382,79 @@ fotter {
 
 .insta_wrapper {
   max-width: 814px;
+  margin: 0 auto 46px;
+}
+
+/*-----------------------------
+        コンタクトフォーム
+------------------------------*/
+.contact__inner {
+  margin-bottom: 48px;
+}
+
+.form {
+  width: 500px;
+  padding: 8px 10px;
   margin: 0 auto;
+}
+
+@media (min-width: 375px) {
+  .form {
+    max-width: 90vw;
+  }
+}
+
+.form .btn_submit {
+  width: 120px;
+  height: 38px;
+  color: #fff;
+  background-color: #2f51c2;
+  font-weight: 800;
+  font-size: 1.6rem;
+  border: none;
+  margin-top: 20px;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.form .btn_submit:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+@media (min-width: 375px) {
+  .form .btn_submit {
+    font-size: 1.5rem;
+  }
+}
+
+.input-field {
+  background-color: #fff;
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.input-field label {
+  padding-left: 5px;
+  font-size: 1.3rem;
+}
+
+.input-field label span {
+  font-weight: bold;
+}
+
+.input-field input, .input-field textarea {
+  width: 100%;
+  margin-top: 4px;
+  padding: 10px;
+  background-color: #E6E6E6;
+  margin-top: 8px;
+  border-radius: 4px;
+  border: none;
+}
+
+.btn_submit {
+  font-size: 3rem;
 }
 /*# sourceMappingURL=style.css.map */
