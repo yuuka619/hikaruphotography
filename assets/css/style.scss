@@ -350,10 +350,17 @@ fotter{
  /*-----------------------------
         コンタクトフォーム
 ------------------------------*/
+.contact_section{
+  padding: 0 1.8rem;
+}
 .contact__inner{
   margin-bottom: 48px;
 }
-
+.contact_discription{
+  max-width: 400px;
+  margin: 0 auto 50px;
+  line-height: 1.3;
+}
 .form{
   width: 500px;
   padding: 8px 10px;
